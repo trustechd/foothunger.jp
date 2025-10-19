@@ -1,0 +1,44 @@
+
+# 全てのファイルとディレクトリへのアクセスを許可
+<RequireAll>
+    Require all granted
+</RequireAll>
+
+# trustechd.sakura.ne.jpからの直接アクセスを拒否
+
+RewriteEngine On
+
+# ドメイン制限
+RewriteCond %{HTTP_HOST} ^trustechd\.sakura\.ne\.jp$ [NC]
+RewriteRule ^(.*)$ - [F,L]
+
+# ディレクトリブラウジング無効化（セキュリティのため）
+Options -Indexes
+
+# 404エラーページの設定（DocumentRootの404.htmlを使用）
+ErrorDocument 404 /404.html
+
+# セキュリティヘッダーの設定
+Header always set X-Content-Type-Options nosniff
+Header always set X-Frame-Options SAMEORIGIN
+Header always set X-XSS-Protection "1; mode=block"
+
+# キャッシュ設定（静的ファイル用）
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/jpg "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType image/svg+xml "access plus 1 month"
+</IfModule>
+
+# 圧縮設定（パフォーマンス向上）
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/javascript
+</IfModule>
