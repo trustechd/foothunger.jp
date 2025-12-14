@@ -1,176 +1,189 @@
 <!DOCTYPE html>
-<html class="dark" lang="ja"><head>
+<html lang="ja"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>TOPページ - Foothunger.jp</title>
+<title>TOPページ</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
 <script id="tailwind-config">
       tailwind.config = {
-        darkMode: "class",
         theme: {
           extend: {
             colors: {
-              "primary": "#ea2a33",
-              "background-light": "#f8f6f6",
-              "background-dark": "#211111",
+              "primary": "#e11d48", // Changed to Rose-600 for a gentle red
+              "background-light": "#ffffff",
+              "gray-text": "#374151", // Unified dark gray (Gray-700)
+              "gray-title": "#374151", // Unified to match text color
+              "gray-desc": "#6b7280",
             },
             fontFamily: {
-              "display": ["Spline Sans", "Noto Sans JP", "sans-serif"]
+              "display": ["Be Vietnam Pro", "sans-serif"]
             },
             borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
           },
         },
       }
     </script>
-<style>
-      .material-symbols-outlined {
-        font-variation-settings:
-        'FILL' 0,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 24
-      }
-    </style>
 </head>
-<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<body class="font-display bg-white text-gray-text antialiased">
 <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
 <div class="layout-container flex h-full grow flex-col">
-<div class="flex flex-1 justify-center py-5">
-<div class="layout-content-container flex w-full flex-col max-w-5xl flex-1 px-4 md:px-8">
-<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-white/10 px-4 py-4">
-<div class="flex items-center gap-3 text-white">
-<div class="size-6 text-primary">
+<header class="flex items-center justify-between whitespace-nowrap px-4 sm:px-8 md:px-16 lg:px-24 xl:px-40 py-5 bg-white border-b border-gray-100">
+<div class="flex items-center gap-4 text-gray-title">
+<div class="size-8 text-primary">
 <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
+<g clip-path="url(#clip0_6_543)">
+<path d="M42.1739 20.1739L27.8261 5.82609C29.1366 7.13663 28.3989 10.1876 26.2002 13.7654C24.8538 15.9564 22.9595 18.3449 20.6522 20.6522C18.3449 22.9595 15.9564 24.8538 13.7654 26.2002C10.1876 28.3989 7.13663 29.1366 5.82609 27.8261L20.1739 42.1739C21.4845 43.4845 24.5355 42.7467 28.1133 40.548C30.3042 39.2016 32.6927 37.3073 35 35C37.3073 32.6927 39.2016 30.3042 40.548 28.1133C42.7467 24.5355 43.4845 21.4845 42.1739 20.1739Z" fill="currentColor"></path>
+<path clip-rule="evenodd" d="M7.24189 26.4066C7.31369 26.4411 7.64204 26.5637 8.52504 26.3738C9.59462 26.1438 11.0343 25.5311 12.7183 24.4963C14.7583 23.2426 17.0256 21.4503 19.238 19.238C21.4503 17.0256 23.2426 14.7583 24.4963 12.7183C25.5311 11.0343 26.1438 9.59463 26.3738 8.52504C26.5637 7.64204 26.4411 7.31369 26.4066 7.24189C26.345 7.21246 26.143 7.14535 25.6664 7.1918C24.9745 7.25925 23.9954 7.5498 22.7699 8.14278C20.3369 9.32007 17.3369 11.4915 14.4142 14.4142C11.4915 17.3369 9.32007 20.3369 8.14278 22.7699C7.5498 23.9954 7.25925 24.9745 7.1918 25.6664C7.14534 26.143 7.21246 26.345 7.24189 26.4066ZM29.9001 10.7285C29.4519 12.0322 28.7617 13.4172 27.9042 14.8126C26.465 17.1544 24.4686 19.6641 22.0664 22.0664C19.6641 24.4686 17.1544 26.465 14.8126 27.9042C13.4172 28.7617 12.0322 29.4519 10.7285 29.9001L21.5754 40.747C21.6001 40.7606 21.8995 40.931 22.8729 40.7217C23.9424 40.4916 25.3821 39.879 27.0661 38.8441C29.1062 37.5904 31.3734 35.7982 33.5858 33.5858C35.7982 31.3734 37.5904 29.1062 38.8441 27.0661C39.879 25.3821 40.4916 23.9425 40.7216 22.8729C40.931 21.8995 40.7606 21.6001 40.747 21.5754L29.9001 10.7285ZM29.2403 4.41187L43.5881 18.7597C44.9757 20.1473 44.9743 22.1235 44.6322 23.7139C44.2714 25.3919 43.4158 27.2666 42.252 29.1604C40.8128 31.5022 38.8165 34.012 36.4142 36.4142C34.012 38.8165 31.5022 40.8128 29.1604 42.252C27.2666 43.4158 25.3919 44.2714 23.7139 44.6322C22.1235 44.9743 20.1473 44.9757 18.7597 43.5881L4.41187 29.2403C3.29027 28.1187 3.08209 26.5973 3.21067 25.2783C3.34099 23.9415 3.8369 22.4852 4.54214 21.0277C5.96129 18.0948 8.43335 14.7382 11.5858 11.5858C14.7382 8.43335 18.0948 5.9613 21.0277 4.54214C22.4852 3.8369 23.9415 3.34099 25.2783 3.21067C26.5973 3.08209 28.1187 3.29028 29.2403 4.41187Z" fill="currentColor" fill-rule="evenodd"></path>
+</g>
+<defs>
+<clipPath id="clip0_6_543">
+<rect fill="white" height="48" width="48"></rect>
+</clipPath>
+</defs>
 </svg>
 </div>
-<h1 class="text-white text-xl font-bold tracking-tight">Foothunger.jp</h1>
+<h2 class="text-gray-title text-xl font-bold leading-tight tracking-[-0.015em]">FootFetish World</h2>
 </div>
-<nav class="hidden md:flex flex-1 justify-end gap-8">
-<div class="flex items-center gap-8">
-<a class="text-white/80 hover:text-white text-sm font-medium transition-colors" href="#">TOP</a>
-<a class="text-white/80 hover:text-white text-sm font-medium transition-colors" href="#">動画一覧</a>
-<a class="text-white/80 hover:text-white text-sm font-medium transition-colors" href="#">女優一覧</a>
+<div class="flex flex-1 justify-end">
+<a class="text-gray-600 hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">お問い合わせ</a>
 </div>
-</nav>
 </header>
-<main class="flex flex-col gap-12">
-<section class="mt-8">
-<h2 class="text-white text-2xl font-bold tracking-tight px-4 pb-4 pt-5 border-l-4 border-primary">新着動画</h2>
-<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 p-4">
-<div class="group relative flex aspect-[3/4] flex-col justify-end overflow-hidden rounded-lg bg-cover bg-center transition-all duration-300 hover:scale-105" data-alt="A woman's feet in high heels on a luxurious carpet." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDXrTq8WK3Z5ZydjmbJePKPK6d_jg7Un_TQqsPlWMAIcR_m3plHLulpJqV7zwiUoAjhsPgxg0c0_cYasKbx1nd0dTptXEuwGnaAOUQN6leMbsg4jMcX_kYEVZvhsXlyzp_ntdUrp4ZBchXLIrEQflRIThOGJMrzFgHtQR5FtzBji3DJphrVf7cf4lt712nU1_YL-5-OvP54BY0hP5TTYxEEZhEl6An7sl4FyEaTGGz_u7v5C3IJuIAi6HgyBEksykNLnInMvp40jHeN");'>
-<div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
-<div class="z-10 p-3">
-<p class="text-white text-sm font-bold leading-tight line-clamp-2">都会の夜景と赤いヒール</p>
+<main class="flex flex-col gap-10 md:gap-16 mt-4 w-full max-w-[1280px] mx-auto px-4 sm:px-8 md:px-16 lg:px-24 xl:px-40">
+<div class="@container">
+<div class="hidden @[480px]:block"></div>
+<div class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-center justify-center p-4 shadow-sm overflow-hidden relative" data-alt="A futuristic city skyline at night" style='background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuA7pUMpZ4vsPYW5JBbhpwivhvp3rK9-YortsrVh5_bs51l6dHftTBZ93SQpc7MTiNm_nI_8PDdd2r0ro8iXVf1yakhKSSuA7io3trmfbj5A6FpaUr_DQvHo2Kr2J1UgQs96pjrr1i3fpACpvS8GHockjO5xyPxizSxdgO_fJgK8YTr2Z-ucx__IWXG98eGTBtNXZw4z5AZyrFOHQaVW5ciqz9seRJSr__btG3GJ2JRwupXsFWY5lQcqmxwpG0y5nBbum7TQ5o2-AeJr");'>
 </div>
 </div>
-<div class="group relative flex aspect-[3/4] flex-col justify-end overflow-hidden rounded-lg bg-cover bg-center transition-all duration-300 hover:scale-105" data-alt="Close up on a pair of feet with painted toenails resting on a soft blanket." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD_g18kv8CkAXxsz-rumsNrMQ_a6-NViv-mLIjexApJtUt23zwfNnORi_DuzcbGVa-ETwMFOfqsopSjUq5geVC7Fpn1B9fMzhC3FHZa3vEcEOaBYUxYprYG5LGw_gf3IJF6Lp6wfxkUWxMw58jwfUjHF5bkMMESk6ABP5gEaFIQl-nRxWddOFTHDbHrTgxq7aLZsiZaV9FwZurJpKRk1GiKz7rbsIGGEwHaKwf1vMNKgNCfvuTUE-VEIOI-fuwvpFSrbSYKOTlcFdjU");'>
-<div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
-<div class="z-10 p-3">
-<p class="text-white text-sm font-bold leading-tight line-clamp-2">休日のリラックスタイム</p>
+<section>
+<h2 class="text-gray-title text-[22px] font-bold leading-tight tracking-[-0.015em] mb-6 mt-5 pl-4 border-l-4 border-primary">新着動画</h2>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+<div class="flex flex-col gap-3 group cursor-pointer">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-none overflow-hidden shadow-sm relative" data-alt="Sample video thumbnail" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA4co14DLLQHSJjxkTmq82Ur0TKhzVEswjz04HGx1XxofgVqHzDx4F5UAFUsC52t2HhY-qrSxCRNz_1oRmhXgUwsIhzgBQIPwBiUSBctNElcvfSg4W7HoYVTL86rqgqh_bSmi2qermKRDiQy2-XRGiIXlqG_skPitN2R5jCh9TZg7z4cspeEa82k_S2fk3LqmyjEF21LTBddoy54JOn5dPCOKYr1s5WAW6i3UmsEfOPE8epNvNw8xJZVBbBqyVap5u4ROxBhKHb4Ne0");'>
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
+</div>
+<div>
+<p class="text-gray-title text-base font-bold leading-normal group-hover:text-primary transition-colors">オフィスレディの休息</p>
+<p class="text-gray-desc text-xs font-normal leading-normal mt-1 text-gray-500">仕事終わりのリラックスタイムを描いた高画質作品。</p>
 </div>
 </div>
-<div class="group relative flex aspect-[3/4] flex-col justify-end overflow-hidden rounded-lg bg-cover bg-center transition-all duration-300 hover:scale-105" data-alt="A pair of feet with sandals on a sandy beach." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAsDqXG_edcqfnXfsfVP0u499i-kYK7zjH1Sf3Ccv-4Cd42Cp2jPxCbpbkSqguFU6RhW1vN375M7wFnmqaD7rEHytwnhpA6FOLYBsxNGNi7cOyjrzsmTdeABOXRtXvirjzPJ5cYRsRuq8ejE6i0EtSLwmKwcDT2LqV2OCSr57jAG9TlwDjzegTPl7A4dmmi8SK2ZNTjnXCGSjKPdmP1sDWRIv7cro2F-X1fpZhwh5fi94NV-COSVhWzQLIGSPJzkXCCA3Slf_OwL7jG");'>
-<div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
-<div class="z-10 p-3">
-<p class="text-white text-sm font-bold leading-tight line-clamp-2">夏の砂浜、素足の誘惑</p>
+<div class="flex flex-col gap-3 group cursor-pointer">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-none overflow-hidden shadow-sm relative" data-alt="Sample video thumbnail" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuArY3jphcymQicwKtxmKdIKqkGh5QpN716x2Q1HML7Rv4wZ6lafQ-eR8lCKLxOFteQBwrzs9p6gPQMqX0oDPwe0vKJGCVDkZIR0HrAe88hPw93gKyev_JNOOsvVQ9BbP9EmTDasJ82NmqHHoMGFGbIhKNGxcs90NA-ZGEWpleCS7qryasxWosIfGk93Cj6QD_TLpTB6JFLdeWB3PcwyhHnS3qHc6N-8KboeXtOGwht4PgoGfGolON_B00pvHKen82K3vFh_v2Y95Tdj");'>
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
+</div>
+<div>
+<p class="text-gray-title text-base font-bold leading-normal group-hover:text-primary transition-colors">休日の朝のひととき</p>
+<p class="text-gray-desc text-xs font-normal leading-normal mt-1 text-gray-500">柔らかな日差しの中で過ごす穏やかな時間。</p>
 </div>
 </div>
-<div class="group relative flex aspect-[3/4] flex-col justify-end overflow-hidden rounded-lg bg-cover bg-center transition-all duration-300 hover:scale-105" data-alt="Woman's feet in elegant stockings and shoes." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCggiBi8eSXaGQ29_mC7GGB2_LzQLOOM5COIFK4s2IHcodEGHCVyD35rphACFMa4BpRFJFKp0vj6FEoMKSqY-hox1V_yy5eb6XyNYM0I-guiXS9uPcTogyxtbGSYoEjpqdW0i2v-U--iCaQFDSjV8lv438RvJJFcn1H_kCNm6sD0gf-xTLJTh9jr3oHrz3tNbXooboQeL4MW0O0h68tHEq1omAHULyHsKqGLUJIcuE1LklFYAFXkowfDNqJk5cX_aodTMpLllPz4HXN");'>
-<div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
-<div class="z-10 p-3">
-<p class="text-white text-sm font-bold leading-tight line-clamp-2">オフィスレディの秘密</p>
+<div class="flex flex-col gap-3 group cursor-pointer">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-none overflow-hidden shadow-sm relative" data-alt="Sample video thumbnail" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDIr20vYZ7A_vFdNOroE54Q1toHXz0Ee9SOPavQa89IRBKNG6iBJ0a0wvzEBQX0FqxACqHIJTtngw8mnqok0OCE1gZr0uu2yBQaoTEMR0cmbH3PngjqGI0MbBUfUUgQvJLfQbV-m0aUEaS1BGNYEiJphWiO5QXDL_8hD0N_STPwLHQmhghOjIrKN48LWAnst1zajYCxFqY5QtkOEnNi2e1ug5e-vFUkjGlc9udlg4k3IMYfcI5vr1xDyavyB7x378QrHR8ZBxHIZ5mq");'>
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
+</div>
+<div>
+<p class="text-gray-title text-base font-bold leading-normal group-hover:text-primary transition-colors">ヨガレッスンの後で</p>
+<p class="text-gray-desc text-xs font-normal leading-normal mt-1 text-gray-500">スポーツウェア姿での柔軟ストレッチ風景。</p>
 </div>
 </div>
-<div class="group relative flex aspect-[3/4] flex-col justify-end overflow-hidden rounded-lg bg-cover bg-center transition-all duration-300 hover:scale-105" data-alt="Bare feet dangling in clear water." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBZZspAez6epCvNlyBhUKKG_vYnN6YadPoG-xrGAy7EP60t-zpmMC04nFkMv_SrZRRedxReLkDSxMzH2r8qKh8ERYJDG9vSimBskEmd9W_HTuxghUv3iFzBXe7nkqbU3ngUnTyrF57cH7y715vqqXvCY6YpxK44jAtbjoErmjWRAQQjajA3Ykwg16_KBoci-T2lSK5KW7oAoE_nnyvq3FB-1VaA3IsFfyoWuLrNFUARDZ1iA7-21qtrFR9zmCwjGrCbvaFnjgaSu3Q9");'>
-<div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
-<div class="z-10 p-3">
-<p class="text-white text-sm font-bold leading-tight line-clamp-2">清流でのひととき</p>
+<div class="flex flex-col gap-3 group cursor-pointer">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-none overflow-hidden shadow-sm relative" data-alt="Sample video thumbnail" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA8jHRlsNLNkju3Zt83aMD03Kfn43TSVprbVxJ0L0WQ9S3ukX4p-gq_ts7tlIQ4sjB9Rd9z-6A-air8XMbkborlDHQpKXof7CA-o43zvUQGOfp2uCuUCy5Lb_SP5IbXhI_6XqLknG_3nY9VlqHbWb6E5W9V1Q-oO4Jr3dYYB3XBjDrx0zYCpY6KL1Ejgn9jUNWpM5zEMi0pOO4r2RoIskzgd8eqIKhkih4_XXT0ejoKC4Ac38XJ2WmE4J8RgRln2nWu0gKRhde474Nb");'>
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
+</div>
+<div>
+<p class="text-gray-title text-base font-bold leading-normal group-hover:text-primary transition-colors">夏の日差しと素足</p>
+<p class="text-gray-desc text-xs font-normal leading-normal mt-1 text-gray-500">ビーチで過ごす開放的なシチュエーション。</p>
 </div>
 </div>
+<div class="flex flex-col gap-3 group cursor-pointer">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-none overflow-hidden shadow-sm relative" data-alt="Sample video thumbnail" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDFnWdlRQEnvgshz0wL5WAcaq-q4QwI7ll-OkkbRFOM0HI_Hp3s4u7G49d9RkFunoCr8yiuoCKR1MroZ1_UA5ttoOB5sVN2dASfLJtmtUYhKNw-GNlXUBuVAZRtqzPv21DBRWrvqxBmA5AugtYoaWs1f-TqpHsWv816OyYxXJA6aGqjq3wVEtj586sp9zJqRK95URFwrlVO0zzN-3A_NLMv3tgCGfeFT-41E2Cpq8Jq9jBRFmcUtrF2Ycrj44I0oHO8VeSHND7UmPAC");'>
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
+</div>
+<div>
+<p class="text-gray-title text-base font-bold leading-normal group-hover:text-primary transition-colors">浴衣で夕涼み</p>
+<p class="text-gray-desc text-xs font-normal leading-normal mt-1 text-gray-500">和室でくつろぐ風情ある映像美。</p>
+</div>
+</div>
+</div>
+<div class="flex py-6 justify-end">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-white border border-primary text-primary text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary hover:text-white transition-colors">
+<span class="truncate">もっと見る</span>
+</button>
 </div>
 </section>
 <section>
-<h2 class="text-white text-2xl font-bold tracking-tight px-4 pb-4 pt-5 border-l-4 border-primary">おすすめ動画</h2>
-<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 p-4">
-<div class="group relative flex aspect-[3/4] flex-col justify-end overflow-hidden rounded-lg bg-cover bg-center transition-all duration-300 hover:scale-105" data-alt="A person applying lotion to their feet." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCq_DftePGmYkkZCWo8YRPFcLAOJZbVuCKsXvSKt9nX3JvsVd5RdTBe5e5ebSTJlbnmtgJ8Z69uUTBUaemfoyTVw077VWm6IX1CrSDV4VPKw0Bvd3Xhl6RKrs7xEx4O5SiAZOTYx_z8GD56wBtyRolWaZ14Inlv1GW1DpndgP39Y_w5fNCOo56O6m6mvu2g9KhKxlS581qjKOXFcrCfBtGA6W-3J08h0pcHTcr7Ugvix_FstOkjz0prv_fSIHHDxabD7Y5zfp_6Rab0");'>
-<div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
-<div class="z-10 p-3">
-<p class="text-white text-sm font-bold leading-tight line-clamp-2">極上のフットケア</p>
+<h2 class="text-gray-title text-[22px] font-bold leading-tight tracking-[-0.015em] mb-6 mt-5 pl-4 border-l-4 border-primary">人気動画</h2>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+<div class="flex flex-col gap-3 group cursor-pointer">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-none overflow-hidden shadow-sm relative" data-alt="Sample video thumbnail" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBEwFlNTSObLIrlcUd9LnIyksY_60HDLpotdapLfKJZNYw_NHcKjtuclavI4zfE-hBlU9qTfuW0fkcxWImdpET2kKlw20I2WKWF8Mr3KpteSIIgoXHEJvtuNYT_Ig1p8ATv11ApfBh_ELEJI8WBEVO_CzLO9MXRtHoBXToKLqCJ3EBjIpt3NQgBenhGibi_yu1BatPJM4yV_iLrRcJICCp7hZjTFf1K9VzZxp4LctxblNRuTH3zfb89FDmblV1IoVxg1_r7bWGAhvEn");'>
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
+</div>
+<div>
+<p class="text-gray-title text-base font-bold leading-normal group-hover:text-primary transition-colors">雨上がりの公園</p>
+<p class="text-gray-desc text-xs font-normal leading-normal mt-1 text-gray-500">濡れた路面と散歩風景のコントラスト。</p>
 </div>
 </div>
-<div class="group relative flex aspect-[3/4] flex-col justify-end overflow-hidden rounded-lg bg-cover bg-center transition-all duration-300 hover:scale-105" data-alt="A woman's feet wearing ballet slippers." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAc3BkVbHgDs9Ho7vpfTxeSrJ_LE3c9AziZQFB438ZyZFrofU-qFRXnD-3nG46CNpA6iqvlSb_fQ4a-64LMSsnShUstzsD6jeomQ63SYgSQgFV35mJ9Qa90yTpKwqCf6Z90-pPdkfpsoV3weob4uaZpxXelXun8UbcBrkljdaWaoPRWz_MRavP6TQhuoDisCoavOvmLQKieHE1JnrQP71TnnuxU_rcQxpJl654QZZC7-ZMSXcIlMPfk7FfjxI_jqTorUHFkBqUf45lA");'>
-<div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
-<div class="z-10 p-3">
-<p class="text-white text-sm font-bold leading-tight line-clamp-2">バレリーナのレッスン</p>
+<div class="flex flex-col gap-3 group cursor-pointer">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-none overflow-hidden shadow-sm relative" data-alt="Sample video thumbnail" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCa36FGtNwzyf1YmWlahbcFhGyLeIkVF5nE8D_8eQC6-97TQtAkEFFCDANN_Ey7pIQ5EgDmacMoIxfjJ1D07Wk86onjP7elJfNh5xrCZcyy7I0ZAuqDP59G2WlHNiAmHtgOlF07xIE2BtEl0YduOfeEicZUn3yZXrnM8QcEwDYUM2Tm-tk5dYWPgkzAcATKI5ZbS26yhdKfxztMjAd_in6UTi74ZHO2KSMCZZlHnVet6zVFhXtUPT9wwqARtXyDYbeppwDTcxCj9PR9");'>
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
+</div>
+<div>
+<p class="text-gray-title text-base font-bold leading-normal group-hover:text-primary transition-colors">自宅でネイルケア</p>
+<p class="text-gray-desc text-xs font-normal leading-normal mt-1 text-gray-500">丁寧な指先のケアシーンを収録。</p>
 </div>
 </div>
-<div class="group relative flex aspect-[3/4] flex-col justify-end overflow-hidden rounded-lg bg-cover bg-center transition-all duration-300 hover:scale-105" data-alt="Feet crossed at the ankles, wearing fuzzy socks." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCbZhRwKwZ6Vg9nkim9NRgh2KwFVZtrXj5vrWtvE05HXguPLaqGfeI7sql-5ZRk4Y4mDNV64AQ9r6wZoFsCdmx0YATVKYYv1I3MP1UxDN7CFNESijPfahE636-UuMOuA4l3Fp7h3eW826ec8syWclalfi51SvndNojOCYvUF3gDLEhIASJ7F3aI1jD9n-jjsWa2zbfskSZ5R5mdWM5DNNaGAmXaYBXfKC-YmKUPGdEfT_cOdyhqjLzCac2-12SymsmcrvOnLqYUYB8p");'>
-<div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
-<div class="z-10 p-3">
-<p class="text-white text-sm font-bold leading-tight line-clamp-2">ぬくもりのルームソックス</p>
+<div class="flex flex-col gap-3 group cursor-pointer">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-none overflow-hidden shadow-sm relative" data-alt="Sample video thumbnail" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCLpRpoHI2LCyX562aRdyeLOffV_SnpLbawKRzK_Uncc11d6w1XuYxXXPI1bq-ATkS10n_l5k74fLt2S6Q7mRSnc5ZWDrohClchAhNRFjMW2DqpaXiqVix-YDYm5CI2-jKkKAob02liRg8b7yqsEHHksVF_C_kg-JqJ4FuXYC1GiCE_i3krXcsyhGOVPXkCpM8UdcALvC3EOfnx2Hkjv51ToHkOV9yvyaff-xgF0G_HKVkhXyuQXUt6yY1zqPbgFum6VSJPqmtbMTOw");'>
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
+</div>
+<div>
+<p class="text-gray-title text-base font-bold leading-normal group-hover:text-primary transition-colors">階段を上るシルエット</p>
+<p class="text-gray-desc text-xs font-normal leading-normal mt-1 text-gray-500">美しいヒールの音とシルエット。</p>
 </div>
 </div>
-<div class="group relative flex aspect-[3/4] flex-col justify-end overflow-hidden rounded-lg bg-cover bg-center transition-all duration-300 hover:scale-105" data-alt="Feet with ankle bracelets." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB-hAsCqt1zsLG5eJIk2Sj2ZJsgD7B9WRH-daJFcAzHr7ad2mCTO6zrPKLHQK1nQBnLLhYK8xq5E4usSSGkQhuJXDCAvq1z4q6hFeiS7SpatisGtmRyYNXwzBDbWoLn28N4ByofG5tyDBtbYaBotIA-ZP0KmYI4B46uK-dI30BZtowWI9lJoY5M9pxO_MixM1_jcbRGlHzKhwlw1VRn9DaSOGT_28UfBa0XdgZGZiz2YF9r47BeYTLtZ64a51p2rTKaiYo6o_BLuvjm");'>
-<div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
-<div class="z-10 p-3">
-<p class="text-white text-sm font-bold leading-tight line-clamp-2">アンクレットの輝き</p>
+<div class="flex flex-col gap-3 group cursor-pointer">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-none overflow-hidden shadow-sm relative" data-alt="Sample video thumbnail" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCbwnBJ3W3uxL3gI85QQnR7mIFQ3LeJi179_F_jeHGfhZZZvN71zOLXibEQULvenlNa-_7mDItemVMeEmfCZk8Yze5UYfH7UDSifwnMepZ3Y3O62TnldM4NnfuxnQoGLyonaoY7-B-T3yOZROoPJLG-wTmvzkwSjD_UsJPkDJLnyi_sxJrbdFWJLvEgXwwDU7rOfE05X4Z96MGnHvScy6e9LP0O7L-y81xL-kXxDnKqAMW49KiV8klRlEieEHzZpmGRzyIo9Py_KNr6");'>
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
+</div>
+<div>
+<p class="text-gray-title text-base font-bold leading-normal group-hover:text-primary transition-colors">図書館での勉強中</p>
+<p class="text-gray-desc text-xs font-normal leading-normal mt-1 text-gray-500">静かな空間での何気ない足元の仕草。</p>
 </div>
 </div>
-<div class="group relative flex aspect-[3/4] flex-col justify-end overflow-hidden rounded-lg bg-cover bg-center transition-all duration-300 hover:scale-105" data-alt="A close up of Japanese Geta sandals." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA06FlQz2qLJtfqw8DtuEMrC4kd8PFjzAcFQrlMPBHP5VyT91vb-P7qDRz-_EetIvcLi0CjIrkc9ePHcQJ-qbr_Fekc2Y_5hkdUsxDxoJx7F81Ue-jmgjiXt2eHQZoDMg5lPEZqeccc3kGtu2cbjan_4dwZjDngDHSDQWUpgL0MMd3I5Bm29lB0SPWUBFfIW9L62dQQ9A6WiQkUzMQiAEAJa4xsAzuQ5HUOv0gJIbcS6NOW6ISkfr0I_vf804Q-fSLCjt14opsc6Pbw");'>
-<div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
-<div class="z-10 p-3">
-<p class="text-white text-sm font-bold leading-tight line-clamp-2">和装と足元の美学</p>
+<div class="flex flex-col gap-3 group cursor-pointer">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-none overflow-hidden shadow-sm relative" data-alt="Sample video thumbnail" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCQ1jYzCMFbfva1v1fx5jthiCJbFXADNOSdHKjW8W3FRsGboHpo5Gj_LvZ6mPyHzaP7IRVDTI6aAKUSYp6yiNZhQj35nVylE5fnTBkd_zBeC4IDeld6XFCo_-ce9tZWUTlB3e9XKn4NJWMqk2BxvD1-vVipDWe89L4HKeTWpaqmSbA8apVzXG15OlUjSCkL083nuK86PBVHgh7eDVA6jmQuJGAKfLUh6WmA3IKBCswlRB-Aimw76m4GrrNb00-EwCd9zyOBlbULcBk5");'>
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
+</div>
+<div>
+<p class="text-gray-title text-base font-bold leading-normal group-hover:text-primary transition-colors">カフェのテラス席</p>
+<p class="text-gray-desc text-xs font-normal leading-normal mt-1 text-gray-500">リラックスして足を組むシーン。</p>
 </div>
 </div>
 </div>
-</section>
-<section>
-<h2 class="text-white text-2xl font-bold tracking-tight px-4 pb-4 pt-5 border-l-4 border-primary">おすすめ女優</h2>
-<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 p-4">
-<a class="group flex flex-col items-center gap-3 text-center transition-all duration-300 hover:scale-105" href="#">
-<div class="relative w-full aspect-square">
-<img class="h-full w-full rounded-full object-cover" data-alt="Portrait of a smiling woman with dark hair." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2Ui3SE2qzmOtOjFUnrujWBkFsLw_nwbEpcZ2tSzycK0jXWTkEXYy78KM5Gvj0e6S1oQZ9v0SpNrt36p4T1Mi9_oZcdRlBkepXK-SZrVq3DyBar2me04wgHjKhNDzQd6DMUEPHsKObQptilZcd3TgAeZNcATNEBjD4273e4BDJxMqLF2bdswPp6ZE9Irmocny7z6k31-SyzaiPFO8dGYWChMsPKUByG5YArKaO5w_rCbc-ZceNaazxpd5u-4q9fkA_SvTy8g99gU3n"/>
-</div>
-<p class="text-white text-sm font-medium leading-tight group-hover:text-primary">Yua A.</p>
-</a>
-<a class="group flex flex-col items-center gap-3 text-center transition-all duration-300 hover:scale-105" href="#">
-<div class="relative w-full aspect-square">
-<img class="h-full w-full rounded-full object-cover" data-alt="Portrait of a woman with short blonde hair." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1wmHvPw46eWsJ0BF2361droPL-08RkhhcMswLIE9dGqU6xiCsgO2rY7VDJlJfm7s0PBaD-6XzC516X77PKgXwdXVaOVK-fQR70SDp_A9SRHevvvnLNajBl5cr_KoFPrzcijwC5HnVhFErLm_zN2fmPfb25NNMebCkPK7hHo7lwv4X3l_J8SiclyNJUxGtHIKhfF0jukcWjD6URefFR5udXD82jzbHN91uQBLXtJRdNbdmAuvdkjLBuWMuMs3q850HrfXGMVQsS3Xt"/>
-</div>
-<p class="text-white text-sm font-medium leading-tight group-hover:text-primary">Rina S.</p>
-</a>
-<a class="group flex flex-col items-center gap-3 text-center transition-all duration-300 hover:scale-105" href="#">
-<div class="relative w-full aspect-square">
-<img class="h-full w-full rounded-full object-cover" data-alt="Portrait of a woman with her hair in a bun." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQwuPojXrk-2622AEYPXXz80FG7rDF-ot9Ot2Y07p5tnO3zNYAA7Id9f-U8yf3R7x_jcZ15ZRh48dROMJiBe5G-jj1xm_GwUBZ_-kAbtexjcjjAzQ8kiBGNUPpPipDn9GvFEgNZWqmiNZ7e0khu9I7STE1LkiYIZhPCehC9jI93pqU_hIo09S0D2XkGz2uB7HhmssQKJ4c44zwh122wK6jf3_sGrG4DkhSx5J1RNwZfwxe_W5K_evSeXBH-Kkv9vmbCPpYc-LI1IsH"/>
-</div>
-<p class="text-white text-sm font-medium leading-tight group-hover:text-primary">Miki K.</p>
-</a>
-<a class="group flex flex-col items-center gap-3 text-center transition-all duration-300 hover:scale-105" href="#">
-<div class="relative w-full aspect-square">
-<img class="h-full w-full rounded-full object-cover" data-alt="Portrait of a woman with long wavy red hair." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsjDiTiDtPeUrIu_VC4E9-8ycZNHWG96BnwWi33dBizX1VuC-CkJxyNYMJfDH1w3oHynaul_9Iu7gij10cUCUiGrkfInkYdZ3DGxNI7z0GdOyqKqJJOtODF2mfPQ71nRW_WloZx-55q99aYEm4uOi_oJT4AXoIPr5-Fqdf4QqR8gjx5IcdVi4jIhFKh71H-HJM3qFsdzZZy8CLzCpnsYBFbIkZQZiXBkHdSudtUEGLqjHsgMgNo0MsY8IXzA1AqBfx_J4-Wx3PZOBr"/>
-</div>
-<p class="text-white text-sm font-medium leading-tight group-hover:text-primary">Airi T.</p>
-</a>
-<a class="group flex flex-col items-center gap-3 text-center transition-all duration-300 hover:scale-105" href="#">
-<div class="relative w-full aspect-square">
-<img class="h-full w-full rounded-full object-cover" data-alt="Portrait of a woman with curly brown hair and glasses." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAS-w9AU3vDS4yMf2uEsUSxR_1zIDlWHw_P73a5nwiIVLEzeVXfgyam1DJG7zj1ZZ-NwQehG4NkyKR0JdNPJJxtiLhV-UXXYg6QptcmYTY44b4f-YvbeWd4FrBnhxK0clghZafqF6hQWRuLjniEP5_x3rU2EoipfaB0ssGph0H58okAm6Zvq-jGpJjIG_iF6AgMc4-c0VN-oM7c5Tt3wZwD86QgRBmsvHfzHmLIjDW7NyMC4YWFX50aVmk6MZ_5WlmkTszhkqnlyg3E"/>
-</div>
-<p class="text-white text-sm font-medium leading-tight group-hover:text-primary">Emi F.</p>
-</a>
+<div class="flex py-6 justify-end">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-white border border-primary text-primary text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary hover:text-white transition-colors">
+<span class="truncate">もっと見る</span>
+</button>
 </div>
 </section>
 </main>
-<footer class="mt-16 flex items-center justify-between border-t border-solid border-white/10 py-8 px-4">
-<p class="text-xs text-white/50">© 2025 foothunger.jp</p>
-<a class="text-xs text-white/50 hover:text-white/80 transition-colors" href="#">お問い合わせ</a>
+<footer class="mt-16 border-t border-slate-100 py-12 px-4 md:px-10 bg-white">
+<div class="flex justify-center">
+<p class="text-gray-400 text-sm">© 2024 FootFetish World. All rights reserved.</p>
+</div>
 </footer>
 </div>
 </div>
-</div>
-</div>
+
 </body></html>

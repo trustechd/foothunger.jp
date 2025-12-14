@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>動画詳細ページ</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&amp;family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#ef4444", // Gentle Red (Tailwind Red-500)
+            },
+            fontFamily: {
+              "display": ['"Be Vietnam Pro"', '"Noto Sans JP"', 'sans-serif']
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-white font-display text-gray-900">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-white overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-gray-200 px-10 py-3 w-full max-w-6xl mx-auto bg-white">
+<div class="flex items-center gap-4">
+<div class="size-6 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-gray-900 text-lg font-bold leading-tight tracking-[-0.015em]">サイトロゴ</h2>
+</div>
+<div class="flex flex-1 justify-end items-center">
+<a class="text-gray-600 hover:text-gray-900 text-sm font-medium leading-normal transition-colors" href="#">お問い合わせ</a>
+</div>
+</header>
+<main class="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+<section class="mb-16">
+<div class="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-12">
+<div class="md:col-span-2">
+<div class="w-full overflow-hidden bg-gray-100 aspect-[2/3] flex flex-col gap-4 shadow-sm">
+<div class="w-full bg-center bg-no-repeat bg-cover aspect-auto flex-1" data-alt="A dramatic movie poster artwork" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBR6F_fqAXm5mFSnjura31mLm124QPCixThx6D_8zdKRevb4ERhlxIDrxlVGeN4VzCbTOmTrH7zsZ8POFregtQVTPGqEFjLHpMEHSEKLc0btGWMC9k4bAACOuFXQ1_m05m8Cd_54m9Sj6JrszQNvHUEG1UaVnsSM446rHKj_fS7bXuFerrFKxqC_81ooSEvGXqvi0e43Mhyit0TfvR3eDP50KiWJ2dZLP4i6OqX7n8nAgsZ8sC3Ln45o3mJzc8bm95LeM6l5gyhWVlG");'></div>
+</div>
+</div>
+<div class="md:col-span-3 flex flex-col">
+<h1 class="text-gray-900 tracking-tight text-[32px] font-bold leading-tight mb-4">動画タイトル</h1>
+<div class="flex gap-2 p-1 flex-wrap mb-6">
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-gray-100 px-3 border border-gray-200">
+<p class="text-gray-700 text-sm font-medium leading-normal">SF</p>
+</div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-gray-100 px-3 border border-gray-200">
+<p class="text-gray-700 text-sm font-medium leading-normal">J・J・エイブラムス</p>
+</div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-gray-100 px-3 border border-gray-200">
+<p class="text-gray-700 text-sm font-medium leading-normal">クリス・パイン</p>
+</div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-gray-100 px-3 border border-gray-200">
+<p class="text-gray-700 text-sm font-medium leading-normal">2009年</p>
+</div>
+</div>
+<h2 class="text-2xl font-bold text-gray-900 mb-4 border-l-4 border-primary pl-4">概要</h2>
+<p class="text-gray-900 leading-relaxed mb-8">これは、宇宙を舞台にした壮大な冒険の物語です。若きクルーたちが未知の脅威に立ち向かい、銀河の運命をかけた戦いに挑みます。友情、裏切り、そして自己発見の旅が、観る者の心を捉えて離しません。最新のVFX技術と心揺さぶるストーリーテリングが融合した、見逃せない一作です。</p>
+<div class="flex justify-start">
+<button class="flex w-full md:w-auto min-w-[240px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-14 px-8 bg-primary hover:bg-red-600 transition-colors text-white text-base font-bold leading-normal tracking-[0.015em] gap-2 shadow-md">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="truncate">作品を購入する</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<div class="space-y-16">
+<section>
+<h2 class="text-2xl font-bold text-gray-900 mb-8 border-l-4 border-primary pl-4">見どころ・感想</h2>
+<div class="space-y-12">
+<div class="flex flex-col md:flex-row gap-8 items-start">
+<div class="w-full md:w-1/3 aspect-video rounded-lg bg-cover bg-center shadow-sm" data-alt="A spaceship flying through a colorful nebula" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBXrHK1YdkYVITSIj4U9BJ5MgDkvvrs3mRPeG_wD5XfuidHI1ez-yqNvN4eFWiK25h6WfQhaqwyxJDrB6ipdplKLMqGT5HfSoRxq2mERSlIO72n61UjRkqWAaSfgXhoof3SzV4yEXSl7LYSiLz2gME_diIskVa33VGjCxSSD29s-1UAh_xhzn0Gla_4IMW0PiNw4HldGdPk3HZI9kE1NGmO3RjuDP-w6G9JMswsqe_jq3uFv3z6AzFl10Q-30N3ekhe4lbTzmkxasI4')"></div>
+<div class="w-full md:w-2/3">
+<h3 class="text-xl font-bold text-gray-900 mb-3">圧巻のビジュアルエフェクト</h3>
+<p class="text-gray-900 leading-relaxed">本作のVFXは息をのむ美しさです。特に、宇宙船がワープするシーンや惑星間の戦闘シーンは、大画面でこそ真価を発揮します。細部にまでこだわり抜かれた映像は、物語への没入感を一層高めてくれます。</p>
+</div>
+</div>
+<div class="flex flex-col md:flex-row gap-8 items-start">
+<div class="w-full md:w-1/3 aspect-video rounded-lg bg-cover bg-center shadow-sm" data-alt="Close up of a futuristic control panel with glowing lights" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBdCNWhoYz8tbUNWiSwIUIFedqh1dB_0rfbDLv9T_rka23tHa0onh804ZNeL-nIqE9ABpxhJ1m6YPwKCqnlQIHcfo00N9-B7y2ULecfsmwIRbsgYJNY7df3jBVZslfBToP8SEQyt2Xf5iashpELVsb3UD4rXN_K0MRU4V-28Wv-emyWl_5xVbxPz3ICJjdMv4DRJqozsW6bSG4lDh5kNvus8f8_84hYX70iqQItJjV2ZrrUb4oQTZEqzIg29dV7569iawEZQYu116Uf')"></div>
+<div class="w-full md:w-2/3">
+<h3 class="text-xl font-bold text-gray-900 mb-3">キャラクターたちの成長物語</h3>
+<p class="text-gray-900 leading-relaxed">若く未熟な主人公たちが、困難なミッションを通じて成長していく姿に心打たれます。彼らの間の絆や葛藤が丁寧に描かれており、単なるSFアクションにとどまらない人間ドラマとしても楽しむことができます。</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+<section class="mt-24">
+<h2 class="text-2xl font-bold text-gray-900 mb-8 border-l-4 border-primary pl-4">関連動画</h2>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+<div class="flex flex-col gap-3 group cursor-pointer">
+<div class="overflow-hidden rounded-lg shadow-sm">
+<div class="aspect-[2/3] w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" data-alt="Movie poster for a related sci-fi film" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBkvn7rKzFHJgKtTnwY_wvY-tYvXJp-Wuad0uNYjS2vPmdUzRrKBpoUKPY_f4x3PQ1uQ21fUirzT82cUvN65cO0rq6lNUWHJJvXjKBDJ14gV3bTG6iJ76jmrxHijdfjGrICeOuC_jr1HW7lqYc4JHtm1fNv_zCYgcaylxNczWZK9evD0FCb96Isuu2WSP9AfSJ03Mz73tSqU-v5sU5LBrxjm5DJsAs4uC3r-Hg12wsXdhLG9dqJwsDtJcO_3MWD-BxOMHgbsQ2qbmeT');"></div>
+</div>
+<div>
+<h3 class="font-bold text-gray-900 truncate">続編タイトル</h3>
+<p class="text-xs text-gray-500 mt-1">さらなる冒険が始まる。</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 group cursor-pointer">
+<div class="overflow-hidden rounded-lg shadow-sm">
+<div class="aspect-[2/3] w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" data-alt="Movie poster for an action-adventure movie" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCLKlwIS8dYR6wjWTCZynMNBGXntDQ_dKPR_64r-S1sI8xRgRwK77LkiyweWHB2KB4TyGWc1-dgxSnMucjMzzN7MHaYG2HPJWnHHpYlfBU0gjP2FBApszopF_PLVBcUtsn5SkV9vlPkJgs73fEwOXnCTmdtN7S189qRf0GJOJOYNkyajTbONfNH4KfnF3GCwI9Ki_OTRbdZE5N-U_UbRZwqRaON21Hzrp4h9mt_apXnexh5Bq3JtrcQYGilvCF72M3-DmQRbj8QECUL');"></div>
+</div>
+<div>
+<h3 class="font-bold text-gray-900 truncate">アドベンチャー映画</h3>
+<p class="text-xs text-gray-500 mt-1">失われた秘宝を求めて。</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 group cursor-pointer">
+<div class="overflow-hidden rounded-lg shadow-sm">
+<div class="aspect-[2/3] w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" data-alt="Movie poster for a fantasy movie" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB7tmKGbj86stW8sfHFfBPpM8Rq6GjTBGuHSKEC29sV7bG7xBTW-t4YaUh5jTl9Fj-1oOCpSy5O_KGYRW4Ec00Nt3lYZjYOwBEa9puS3JAN-Xc1_1t3zH2Qztkp5WLVdNsbODqW-cnDh42_Sr9p_dgmkhx4fKY9zAjil8kD2sYb0k15hoEtafCTwRFTMJyQbrKjplio4pCCfDQkxesfbSV2YbfK2XBLKq4UHii8HOck7TjJGSvxfKMtKfbn4an9GRcEG-cXBjNH-L2Q');"></div>
+</div>
+<div>
+<h3 class="font-bold text-gray-900 truncate">ファンタジー巨編</h3>
+<p class="text-xs text-gray-500 mt-1">魔法と剣の世界。</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 group cursor-pointer">
+<div class="overflow-hidden rounded-lg shadow-sm">
+<div class="aspect-[2/3] w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" data-alt="Movie poster for a cyberpunk thriller" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDKyYQ9CtNjsN6NOOqBhV755YEul4kKnuACFjY-EnIxYO7vaOZbvLlvVjWwjBQ23ndAjaa5jeJ-LL9AcG4n8qVyhPV9csRL4FNQr8FGQEzQYpkNrQv_SP1_XaXBgrEYkGeYp3IkTnTB-vKTG5JJ6ltmJ3h2ZyyRy4ACr0cixMoxLm5uM3x31nZhlJauixcuJSyc3F_AxA72ZkZq3RCQjGE0VUxo0zpalP6wqQbxGZ5q4OOAHj7eVru5KiXpAUNsVcUBb60a_5osMVvh');"></div>
+</div>
+<div>
+<h3 class="font-bold text-gray-900 truncate">サイバーパンク・スリラー</h3>
+<p class="text-xs text-gray-500 mt-1">近未来都市の闇。</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 group cursor-pointer">
+<div class="overflow-hidden rounded-lg shadow-sm">
+<div class="aspect-[2/3] w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" data-alt="Movie poster for a classic space opera" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAYCvfQmeNGmi4de2D2H5z-cA3jss-ya4LVfO72ObnhjS9m4rrArubc8nCMIH46TpySNHQO96qJEPwbCHXv8EjbaO2LonZF7M3j52u_yf0ZaJhWrV07mE3fpQfjJxwzPtzgDQWccSFoIUXDE1pJBgadd15YkScugpW70cbx2wkYHZ50iNwqRTx8-DJoeEa4ATaOSsA04ofgSExsK2Ht1SqBmi6sfLMOyd8iv8-2IiiLlR2kvk6S6GnMjf3AMXPcsRF8r-pNUsppDvxa');"></div>
+</div>
+<div>
+<h3 class="font-bold text-gray-900 truncate">スペースオペラの名作</h3>
+<p class="text-xs text-gray-500 mt-1">銀河を巡る叙事詩。</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 py-8 border-t border-gray-200">
+<div class="text-center text-gray-500 text-sm">
+<p>© 2024 サイト名. All Rights Reserved.</p>
+</div>
+</footer>
+</div>
+</div>
+
+</body></html>

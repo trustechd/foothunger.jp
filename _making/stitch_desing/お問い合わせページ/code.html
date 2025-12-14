@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>お問い合わせページ</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#f43f5e",
+            "background-light": "#f6f6f8",
+          },
+          fontFamily: {
+            "display": ["Be Vietnam Pro", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-white font-display text-slate-700">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col w-full max-w-[960px] flex-1 px-4 md:px-0">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 px-4 sm:px-10 py-3">
+<div class="flex items-center gap-4">
+<div class="size-6 text-primary">
+<svg data-alt="Abstract rocket logo icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm0 18a8 8 0 1 1 8-8 8.009 8.009 0 0 1-8 8Z"></path>
+<path d="m14.221 16.918-.707.707a1 1 0 0 1-1.414 0l-4.414-4.414a1 1 0 0 1 0-1.414l.707-.707a3 3 0 0 1 4.242 0l1.591 1.59a1 1 0 0 0 1.414 0l.707-.707a1 1 0 0 1 1.414 0l.707.707a1 1 0 0 1 0 1.414l-2.121 2.121a3 3 0 0 1-4.242 0Zm-2.828-8.484.707-.707a1 1 0 0 1 1.414 0l4.414 4.414a1 1 0 0 1 0 1.414l-.707.707a3 3 0 0 1-4.242 0l-1.591-1.59a1 1 0 0 0-1.414 0l-.707.707a1 1 0 0 1-1.414 0l-.707-.707a1 1 0 0 1 0-1.414l2.121-2.121a3 3 0 0 1 4.242 0Z"></path>
+</svg>
+</div>
+<h2 class="text-slate-700 text-lg font-bold leading-tight tracking-[-0.015em]">MovieSite</h2>
+</div>
+<div class="flex items-center">
+<a class="text-slate-700 text-sm font-medium leading-normal transition-colors hover:text-slate-900" href="#">お問い合わせ</a>
+</div>
+</header>
+<main class="flex-grow my-12 md:my-20">
+<div class="flex flex-col items-center justify-center gap-8 text-center">
+<div class="flex flex-col gap-3 px-4 max-w-2xl">
+<h1 class="text-slate-700 text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em]">お問い合わせ</h1>
+<p class="text-slate-700 text-base md:text-lg font-normal leading-relaxed">
+                  当サイトに関するご質問やご意見がございましたら、以下のリンクよりお問い合わせください。映画のリクエストや広告掲載に関するお問い合わせもこちらで受け付けております。通常、3営業日以内にご返信いたします。
+                </p>
+</div>
+<div class="flex px-4 py-3 justify-center">
+<a class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-rose-600 transition-colors shadow-sm" href="mailto:support@example.com?subject=お問い合わせ">
+<span class="material-symbols-outlined mr-2">email</span>
+<span class="truncate">メールでお問い合わせ</span>
+</a>
+</div>
+</div>
+</main>
+<footer class="flex items-center justify-center px-5 py-10 text-center border-t border-solid border-slate-200 mt-auto">
+<p class="text-slate-500 text-sm font-normal leading-normal">© 2023 MovieSite. All rights reserved.</p>
+</footer>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>
